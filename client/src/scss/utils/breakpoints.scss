@@ -1,0 +1,42 @@
+// use mixin that I can reuse the code everytime I have to write a media query
+
+// 640px, 1150px, 1400px
+$breakpoints-up: (
+	// 'medium': '40em',
+	'small': '20em',
+	'small-medium': '30em',
+	//480px
+	'medium': '40.9375em',
+	'large': '71.875em',
+	'xlarge': '87.5em'
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+	// 'small': '39.9375em',
+	'extra-small': '30em',
+	'small': '40.9375em',
+	'small_medium': '48.125em',
+	'medium': '71.8125em',
+	'medium-large': '75em',
+	//1200px
+	'large': '87.4375em'
+);
+
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-between($size1, $size2) {
+	@media (min-width: map-get($breakpoints-up, $size1)) and (max-width: map-get($breakpoints-down, $size2)) {
+		@content;
+	}
+}

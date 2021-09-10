@@ -1,0 +1,75 @@
+@use '../utils' as *;
+
+.messages {
+	padding: 5% 0;
+	overflow: auto;
+	flex: auto;
+}
+
+.message-container {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0 5%;
+	margin-top: 3px;
+}
+
+.send-text {
+	display: flex;
+	align-items: center;
+	font-family: Helvetica;
+	color: #828282;
+	letter-spacing: 0.3px;
+}
+
+.message-box {
+	background-color: var(--light-gray);
+	border-radius: 20px;
+	padding: 5px 20px;
+	color: var(--white);
+	display: inline-block;
+	max-width: 80%;
+}
+
+.message-text {
+	width: 100%;
+	letter-spacing: 0;
+	float: left;
+	font-size: 1.1em;
+	word-wrap: break-word;
+}
+
+.message-text img {
+	vertical-align: middle;
+}
+
+.pl-10 {
+	padding-left: 10px;
+}
+
+.pr-10 {
+	padding-right: 10px;
+}
+
+.justifyStart {
+	justify-content: flex-start;
+}
+
+.justifyEnd {
+	justify-content: flex-end;
+}
+
+.color-white {
+	color: var(--white);
+}
+
+.color-dark {
+	color: var(--dark-gray);
+}
+
+.background-green {
+	background-color: var(--green);
+}
+
+.background-light-gray {
+	background-color: var(--light-gray);
+}

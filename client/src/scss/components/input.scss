@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+.form {
+	display: flex;
+	border-top: rem(2) solid var(--light-gray);
+}
+
+.input {
+	border: none;
+	border-radius: 0;
+	padding: 5%;
+	width: 80%;
+	font-size: 1.2em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+}
+
+.sendButton {
+	color: var(--white) !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: var(--green);
+	padding: rem(20);
+	display: inline-block;
+	border: none;
+	width: 20%;
+}

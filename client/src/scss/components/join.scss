@@ -1,0 +1,68 @@
+@use '../utils' as *;
+
+.join-outer-container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
+	align-items: center;
+	background-color: var(--white);
+
+	@include breakpoint-between(small, extra-small) {
+		height: 100%;
+	}
+}
+
+.join-inner-container {
+	width: 20%;
+
+	@include breakpoint-between(small, extra-small) {
+		width: 90%;
+	}
+}
+
+.join-input {
+	border-radius: 0;
+	padding: rem(15) rem(20);
+	text-decoration: none;
+	width: 100%;
+	font-family: var(--font-secondary);
+}
+
+.header {
+	color: var(--dark-gray);
+	font-family: var(--font-secondary);
+	font-size: 2.5em;
+	padding-bottom: rem(10);
+	border-bottom: rem(2) solid var(--green);
+}
+
+.btn {
+	font-family: var(--font-secondary);
+	color: var(--white) !important;
+	cursor: pointer;
+	text-transform: capitalize;
+	text-decoration: none;
+	background-color: var(--green);
+	padding: rem(20);
+	border-radius: rem(5);
+	display: inline-block;
+	border: none;
+	width: 100%;
+}
+
+.btn:hover {
+	opacity: 0.5;
+}
+
+.mt-20 {
+	margin-top: rem(20);
+}
+
+input:focus {
+	outline: 0;
+}
+
+button:focus {
+	outline: 0;
+}
